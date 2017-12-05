@@ -27,6 +27,7 @@ body,html{
 	width:100%;
 	position:fixed;
 	bottom:0px;
+	text-align: center;
 }
 #nave{
 	text-align:center;
