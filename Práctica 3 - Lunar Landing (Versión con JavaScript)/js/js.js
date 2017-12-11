@@ -1,4 +1,3 @@
-
 //ENTORNO
 var g = 1.622;
 var dt = 0.016683;
@@ -79,7 +78,7 @@ function motorOn(){
 	a=-g;
 	//mientras el motor esté activado gasta combustible
 	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);	
+	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
 }
 function motorOff(){
 	a=g;

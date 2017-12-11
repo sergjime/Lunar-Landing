@@ -6,7 +6,6 @@ body,html{
 	background-size: cover;
 }
 .a{
-	background-color:#00bcd4;
 	width:100%;
 	height:90px;
 	overflow:hidden;
@@ -14,13 +13,11 @@ body,html{
 	top:0px
 }
 .b{
-	background-color:red;
 	width:100%;
 	height:100%;
 	overflow:hidden;
 }
 .c{
-	background-color:#cddc39;
 	position:fixed;
 	top:0px;
 	bottom:0px;
@@ -30,11 +27,11 @@ body,html{
 	z-index:1
 }
 .d{
-	background-color:pink;
+	height:17%;
+	width:100%;
 	position:fixed;
 	bottom:0px;
-	height:10%;
-	width:100%;
+	text-align: center;
 }
 #nave{
 	text-align:center;
@@ -46,9 +43,15 @@ body,html{
 #nave img{
 	height:100%;
 }
-#cpanel{
-	
+#cpanel li{
+	background-color: orange;
+	padding: 1%;
+	font-size: 20px;
+	list-style: none;
 }
 #hidem,#showm{
 	float:right;
+}
+#negrita{
+	font-weight: bold;
 }
