@@ -5,14 +5,7 @@ body,html{
 	background: url(../img/fondo.png) no-repeat center center fixed;
 	background-size: cover;
 }
-.a{
-	background-color:#00bcd4;
-}
-.b{
-	background-color:red;
-}
 .c{
-	background-color:#cddc39;
 	display:block !important
 }
 .a,.b,.c{
@@ -22,11 +15,11 @@ body,html{
 	float:left;
 }
 .d{
-	background-color:pink;
-	height:10%;
+	height:17%;
 	width:100%;
 	position:fixed;
 	bottom:0px;
+	text-align: center;
 }
 #nave{
 	text-align:center;
@@ -38,9 +31,22 @@ body,html{
 #nave img{
 	height:100%;
 }
-#cpanel{
-	
+#cpanel li,#menu li,#instrucciones{
+	background-color: orange;
+	padding: 1%;
+	font-size: 20px;
+	list-style: none;
+}
+#cpanel li{
+	width: 60%;
+}
+#menu li{
+	float: left;
+	margin: 1%;
 }
 #hidem,#showm{
 	display:none;
+}
+#negrita{
+	font-weight: bold;
 }
