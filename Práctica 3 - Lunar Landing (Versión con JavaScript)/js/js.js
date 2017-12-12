@@ -63,14 +63,15 @@ function moverNave(){
 	v +=a*dt;
 	y +=v*dt;
 	//actualizar marcadores
-	velocidad.innerHTML=v;
-	altura.innerHTML=y;
+	velocidad.innerHTML=v.toFixed(2);
+	altura.innerHTML=y.toFixed(2);
 	
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
 		stop();
+		alert("has terminado con "+v.toFixed(2)+" m/s")
 	}
 }
 function motorOn(){
@@ -89,5 +90,5 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	combustible.innerHTML=c;	
+	combustible.innerHTML=c.toFixed(2);
 }

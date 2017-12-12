@@ -4,6 +4,7 @@ body,html{
 	margin:0px;	
 	background: url(../img/fondo.png) no-repeat center center fixed;
 	background-size: cover;
+	z-index: -1;
 }
 .c{
 	display:block !important
@@ -20,6 +21,7 @@ body,html{
 	position:fixed;
 	bottom:0px;
 	text-align: center;
+	z-index:0;
 }
 #nave{
 	text-align:center;
@@ -27,6 +29,7 @@ body,html{
 	top:10%;
 	width:100%;
 	height:20%;
+	z-index:2;
 }
 #nave img{
 	height:100%;
