@@ -6,6 +6,21 @@ body,html{
 	background-size: cover;
 	z-index: -1;
 }
+h1{
+	font-weight: bold;
+	font-size: 20px;
+	background-color: orange;
+	width: 50%;
+	position: absolute;
+	margin-left: 25%;
+	margin-top: 1%;
+	border:1px solid #808080;
+	padding:1%;
+	
+}
+h1,h3,p{
+	text-align: center;
+}
 .c{
 	display:block !important
 }
@@ -50,6 +65,35 @@ body,html{
 #hidem,#showm{
 	display:none;
 }
-#negrita{
+.negrita{
 	font-weight: bold;
+}
+#win,#lose{ 
+	z-index:3;
+	position:fixed;
+	background-color:orange;  
+	width:60%;
+	height:50%;
+	left: 20%;
+	top: 20%;
+	opacity: 0.7;
+	border-radius: 10px;
+	display:none;
+	color:#b82e2e;
+	text-align:center;
+}
+#instrucciones{
+	width: 50%;
+	position: absolute;
+	/*nos posicionamos en el centro del navegador*/
+	top:50%;
+	left:50%;
+	/*indicamos que el margen izquierdo, es la mitad de la anchura*/
+	margin-left:-25%;
+	/*determinamos una altura*/
+	height:30%;
+	/*indicamos que el margen superior, es la mitad de la altura*/
+	margin-top:-15%;
+	border:1px solid #808080;
+	padding:1%;
 }

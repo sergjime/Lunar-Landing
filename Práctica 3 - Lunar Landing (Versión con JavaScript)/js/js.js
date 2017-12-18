@@ -13,12 +13,15 @@ var velocidad = null;
 var altura = null;
 var combustible = null;
 
+var fuelValor = 100;  
+
 //al cargar por completo la página...
 window.onload = function(){
 	
 	velocidad = document.getElementById("velocidad");
 	altura = document.getElementById("altura");
 	combustible = document.getElementById("fuel");
+	combustible.innerHTML = fuelValor;
 
 	
 	//definición de eventos
@@ -62,8 +65,7 @@ function moverNave(){
 	//cambiar velocidad y posicion
 	v +=a*dt;
 	y +=v*dt;
-	//actualizar marcadores
-	velocidad.innerHTML=v.toFixed(2);
+	//actualizar marcadoresf
 	altura.innerHTML=y.toFixed(2);
 	
 	//mover hasta que top sea un 70% de la pantalla
@@ -71,17 +73,21 @@ function moverNave(){
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
 		stop();
-		alert("has terminado con "+v.toFixed(2)+" m/s")
+		alert("Has terminado con "+v.toFixed(2)+" m/s de velocidad\nHas terminado con "+c.toFixed(2)+" l de fuel\nHas terminado con "+y.toFixed(2)+" m de altura")
 	}
 }
 function motorOn(){
 	//el motor da aceleración a la nave
-	a=-g;
-	//mientras el motor esté activado gasta combustible
-	if (timerFuel==null)
-	timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
+	if (!fuelValor <= 0) {
+		document.getElementById("naveIcono").src = "img/NaveFuego.png";
+		a=-g;
+		//mientras el motor esté activado gasta combustible
+		if (timerFuel==null)
+		timerFuel=setInterval(function(){ actualizarFuel(); }, 10);
+	}
 }
 function motorOff(){
+	document.getElementById("naveIcono").src = "img/nave.png";
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
@@ -90,5 +96,9 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	combustible.innerHTML=c.toFixed(2);
+	fuelValor = fuelValor - 0.5;
+	combustible.innerHTML = fuelValor;
+	if (fuelValor === 0) {
+		motorOff();
+	}
 }
