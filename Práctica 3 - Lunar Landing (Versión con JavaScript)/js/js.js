@@ -45,7 +45,10 @@ window.onload = function(){
  	  }
 	}
 	//encender/apagar al apretar/soltar una tecla
-	document.onkeydown = motorOn;
+	document.onkeydown = function(event){
+		event.onkeyCode = 32;
+		motorOn();
+	}
 	document.onkeyup = motorOff;
 	
 	//Empezar a mover la nave justo después de cargar la página
@@ -67,25 +70,15 @@ function moverNave(){
 	//cambiar velocidad y posicion
 	v +=a*dt;
 	y +=v*dt;
-	//actualizar marcadoresf
 	altura.innerHTML=y.toFixed(2);
 
-	 if(y <= 5){
-		// a=g; v = 1;
-		
-		y++;
-		motorOff();
-		
-		//document.getElementById("nave").style.top = -y+"%"; 
-		
-	}
 
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
 		stop();
-		alert("Has terminado con "+v.toFixed(2)+" m/s de velocidad\nHas terminado con "+c.toFixed(2)+" l de fuel\nHas terminado con "+y.toFixed(2)+" m de altura")
+		alert("Has terminado con "+v.toFixed(2)+" m/s de velocidad\nHas terminado con "+fuelValor.toFixed(2)+" l de fuel\nHas terminado con "+y.toFixed(2)+" m de altura")
 		document.getElementById("velocidad").innerHTML="";
 		document.getElementById("altura").innerHTML="";
 		terminado = true;
@@ -115,10 +108,9 @@ function motorOff(){
 }
 function actualizarFuel(){
 	//Restamos combustible hasta que se agota
-	c-=0.1;
-	if (c < 0 ) c = 0;
-	fuelValor = fuelValor - 0.5;
-	combustible.innerHTML = fuelValor;
+	fuelValor-=0.1;
+	if (fuelValor < 0 ) fuelValor = 0;
+	combustible.innerHTML = fuelValor.toFixed(2);
 	if (fuelValor === 0) {
 		motorOff();
 	}
