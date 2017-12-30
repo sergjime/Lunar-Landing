@@ -1,3 +1,0 @@
-document.onkeydown = function(event){
-	if(event.keyCode == 32) alert("He pulsado espacio");
-}
