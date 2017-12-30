@@ -45,7 +45,9 @@ window.onload = function(){
  	  }
 	}
 	//encender/apagar al apretar/soltar una tecla
-	document.onkeydown = motorOn;
+	document.onkeydown = function(event){
+	if(event.keyCode == 32) motorOn();
+	}
 	document.onkeyup = motorOff;
 	
 	//Empezar a mover la nave justo después de cargar la página
