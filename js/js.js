@@ -86,11 +86,16 @@ function moverNave(){
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
-		stop();
 		alert("Has terminado con "+v.toFixed(2)+" m/s de velocidad\nHas terminado con "+c.toFixed(2)+" l de fuel\nHas terminado con "+y.toFixed(2)+" m de altura")
 		document.getElementById("velocidad").innerHTML="";
 		document.getElementById("altura").innerHTML="";
 		terminado = true;
+		if (v>3){ 
+			lose();
+		}
+		else { 
+			win();
+		}
 	}
 }
 function motorOn(){
@@ -113,9 +118,23 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	fuelValor = fuelValor - 0.5;
+	fuelValor = fuelValor - 0.01;
 	combustible.innerHTML = fuelValor;
 	if (fuelValor === 0) {
 		motorOff();
 	}
+}
+
+function win(){
+	document.getElementById("win").style.display = "block";
+	stop();
+
+}
+
+function lose(){
+	document.getElementById("naveIcono").src = "img/nave_rota.png";
+	document.getElementById("lose").style.display = "block";
+	stop();
+	
+	
 }

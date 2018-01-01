@@ -67,3 +67,17 @@ body,html{
 #negrita{
 	font-weight: bold;
 }
+#win,#lose{ 
+	z-index:3;
+	position:fixed;
+	background-color:orange;  
+	width:60%;
+	height:50%;
+	left: 20%;
+	top: 20%;
+	opacity: 0.7;
+	border-radius: 10px;
+	display:none;
+	color:#b82e2e;
+	text-align:center;
+}
