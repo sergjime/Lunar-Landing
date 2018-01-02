@@ -118,7 +118,7 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	fuelValor = fuelValor - 0.5;
+	fuelValor = fuelValor - 5;
 	combustible.innerHTML = fuelValor;
 	if (fuelValor === 0) {
 		motorOff();
