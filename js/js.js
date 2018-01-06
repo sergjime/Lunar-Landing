@@ -111,7 +111,7 @@ function motorOn(){
 	}
 }
 function motorOff(){
-	document.getElementById("naveIcono").src = "img/nave.png";
+	document.getElementById("naveIcono").src = "img/Nave.png";
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
