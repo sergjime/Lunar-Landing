@@ -6,8 +6,10 @@ __Desarrollado por:__ Sergio Jiménez Sastre.
 
 ### 3ª Fase
 
-En esta fase añadimos JavaScript a nuestro Lunar Lander para así darle vida al juego. El aspecto final del juego es este:
+En esta fase añadimos JavaScript a nuestro Lunar Lander para así darle vida al juego. `El aspecto final del juego es este`
 
-![Aspecto Lunar Lander](https://github.com/sergjime/Lunar-Landing/blob/master/img/aspecto.png)
+![Aspecto Lunar Lander en desktop](https://github.com/sergjime/Lunar-Landing/blob/master/img/aspecto.png)
+
+![Aspecto Lunar Lander en smartphone](https://github.com/sergjime/Lunar-Landing/blob/master/img/aspecto_m.png)
 
 https://rawgit.com/sergjime/Lunar-Landing/master/index.html
