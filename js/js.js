@@ -111,7 +111,7 @@ function motorOn(){
 	}
 }
 function motorOff(){
-	document.getElementById("naveIcono").src = "img/Nave.png";
+	document.getElementById("naveIcono").src = "img/nave.png";
 	a=g;
 	clearInterval(timerFuel);
 	timerFuel=null;
@@ -150,4 +150,14 @@ function actualizarVelocidad(){
 	v +=a*dt;
 	document.getElementById("velocidad").innerHTML=v.toFixed(2);
 
+}
+function pausa(){
+	stop();
+	document.getElementById("play").style.display = "block";
+	document.getElementById("stop").style.display = "none";
+}
+function empieza(){
+	start();
+	document.getElementById("play").style.display = "none";
+	document.getElementById("stop").style.display = "block";
 }

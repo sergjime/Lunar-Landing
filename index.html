@@ -27,7 +27,8 @@
  <div id="hidem"></div>
 	 <ul id="menu">
 		  <li><a href="#" id="reiniciar"><img src="img/reiniciar.png" alt="img reiniciar"></a></li>
-		  <li><a href="#" onClick="stop()"><img src="img/play_pause.png" alt="img play_pause"></a></li>
+		  <li id="stop"><a href="#" onClick="pausa()"><img src="img/pause.png" alt="img pause"></a></li>
+		  <li id="play"><a href="#" onclick="empieza()"><img src="img/play.png" alt="img play"></a></li>
 		  <li><a href="#"><img src="img/opciones.png" alt="img opciones"></a></li>
 		  <li><a href="instrucciones.html"><img src="img/instructions.png" alt="img instrucciones"></a></li>
 	 </ul>
@@ -38,7 +39,7 @@
 	<a href="index.html"><img src="img/reinicie.png" alt="Boton retry"/></a>
 </div>
 <div id="lose">
-	<h1> HAS PERDIDO </h1>   
+	<h1> HAS PERDIDO </h1>
 	<a href="index.html"><img src="img/reinicie.png" alt="Boton retry"/></a>
 </div>
 </body>
