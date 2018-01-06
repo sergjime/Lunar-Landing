@@ -16,6 +16,9 @@ var combustible = null;
 var fuelValor = 100;
 var terminado = false;
 
+var nAltura = 70;
+
+
 //al cargar por completo la página...
 window.onload = function(){
 	
@@ -36,13 +39,17 @@ window.onload = function(){
 		document.getElementsByClassName("c")[0].style.display = "none";
 		start();
 	}
+	//recarga la página al pulsar encima del elemento indicado
+	document.getElementById("reiniciar").onclick = function () {
+        location.reload();
+    }
 	//encender/apagar el motor al hacer click en la pantalla
-	document.onclick = function () {
- 	  if (a==g){
-  		motorOn();
- 	  } else {
-  		motorOff();
- 	  }
+	document.getElementById("boton").onclick = function () {
+		if (a==g){
+			motorOn();
+		} else {
+			motorOff();
+		}
 	}
 	//encender/apagar al apretar/soltar una tecla
 	document.onkeydown = function(event){
@@ -65,31 +72,26 @@ function stop(){
 }
 
 function moverNave(){
-
+	
+	actualizarVelocidad();
+	actualizarAltura();
 	//cambiar velocidad y posicion
 	v +=a*dt;
 	y +=v*dt;
-	//actualizar marcadoresf
-	altura.innerHTML=y.toFixed(2);
 
-	 if(y <= 5){
-		// a=g; v = 1;
-		
+	 if(y <= 5){		
 		y++;
-		motorOff();
-		
-		//document.getElementById("nave").style.top = -y+"%"; 
-		
+		motorOff(); 	
 	}
 
 	//mover hasta que top sea un 70% de la pantalla
 	if (y<70){ 
 		document.getElementById("nave").style.top = y+"%"; 
 	} else { 
-		alert("Has terminado con "+v.toFixed(2)+" m/s de velocidad\nHas terminado con "+c.toFixed(2)+" l de fuel\nHas terminado con "+y.toFixed(2)+" m de altura")
 		document.getElementById("velocidad").innerHTML="";
-		document.getElementById("altura").innerHTML="";
 		terminado = true;
+		stop();
+		motorOff();
 		if (v>3){ 
 			lose();
 		}
@@ -118,23 +120,34 @@ function actualizarFuel(){
 	//Restamos combustible hasta que se agota
 	c-=0.1;
 	if (c < 0 ) c = 0;
-	fuelValor = fuelValor - 5;
-	combustible.innerHTML = fuelValor;
-	if (fuelValor === 0) {
+	c = c - 0.1;
+	combustible.innerHTML = Math.round(c);
+	if (c === 0) {
 		motorOff();
 	}
 }
 
 function win(){
 	document.getElementById("win").style.display = "block";
+	motorOff();
 	stop();
-
 }
 
 function lose(){
+	motorOff();
 	document.getElementById("naveIcono").src = "img/nave_rota.png";
 	document.getElementById("lose").style.display = "block";
 	stop();
-	
-	
+}
+
+function actualizarAltura(){
+	altura.innerHTML = Math.round(nAltura - y);
+}
+
+function actualizarVelocidad(){
+		
+	var contNumVel = Math.abs(v);	
+	v +=a*dt;
+	document.getElementById("velocidad").innerHTML=v.toFixed(2);
+
 }

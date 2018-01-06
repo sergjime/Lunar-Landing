@@ -78,14 +78,17 @@ h1,h3,p{
 	position:fixed;
 	background-color:orange;  
 	width:60%;
-	height:50%;
+	height:40%;
 	left: 20%;
-	top: 20%;
+	top: 23%;
 	opacity: 0.7;
 	border-radius: 10px;
 	display:none;
 	color:#b82e2e;
 	text-align:center;
+}
+#win img,#lose img{
+	margin-top: 7%;
 }
 #instrucciones{
 	width: 50%;
@@ -101,4 +104,7 @@ h1,h3,p{
 	margin-top:-15%;
 	border:1px solid #808080;
 	padding:1%;
+}
+#boton{
+	display: none;
 }

@@ -47,6 +47,7 @@ body,html{
 	top:10%;
 	width:100%;
 	height:20%;
+	z-index:2;
 }
 #nave img{
 	height:100%;
@@ -60,9 +61,11 @@ body,html{
 	padding: 1%;
 	font-size: 20px;
 	list-style: none;
+	width: 50%;
 }
 #hidem,#showm{
 	float:right;
+	background-color:orange;
 }
 #negrita{
 	font-weight: bold;
@@ -80,4 +83,9 @@ body,html{
 	display:none;
 	color:#b82e2e;
 	text-align:center;
+}
+#propulsor{
+	z-index:3;
+	position:fixed;
+	bottom: 0;
 }
