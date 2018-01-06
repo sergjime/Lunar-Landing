@@ -1,8 +1,8 @@
 # LUNAR LANDER
 
 
-__Diseñado por__: Rubén Juárez Bustamante.
+__Diseñado por:__ Rubén Juárez Bustamante.
 
-__Desarrollado por__: Sergio Jiménez Sastre.
+__Desarrollado por:__ Sergio Jiménez Sastre.
 
 https://rawgit.com/sergjime/Lunar-Landing/master/index.html
