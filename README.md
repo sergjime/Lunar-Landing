@@ -8,7 +8,7 @@ __Desarrollado por:__ Sergio Jiménez Sastre.
 
 En esta fase añadimos JavaScript a nuestro Lunar Lander para así darle vida al juego.
 
-`La nave utilizada para el proyecto es la siguiente, el cual pasa a tener fuego cuando el jugado le da combustible.`
+`La nave utilizada para el proyecto es la siguiente, el cual pasa a tener fuego cuando el jugador le da combustible.`
 
 ![Nave](https://github.com/sergjime/Lunar-Landing/blob/master/img/Nave.png)![Flecha](https://github.com/sergjime/Lunar-Landing/blob/master/img/Right3Green.png)![NaveConFuego](https://github.com/sergjime/Lunar-Landing/blob/master/img/NaveFuego.gif)
 
