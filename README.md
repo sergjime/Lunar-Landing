@@ -19,4 +19,4 @@ La nave utilizada para el proyecto es la siguiente, el cual pasa a tener fuego c
 
 ![Aspecto Lunar Lander en smartphone](https://github.com/sergjime/Lunar-Landing/blob/master/img/aspecto_m.png)
 
-https://rawgit.com/sergjime/Lunar-Landing/master/index.html
+El rawgit de este proyecto lo podemos ver [aquí](https://rawgit.com/sergjime/Lunar-Landing/master/index.html).
